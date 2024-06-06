@@ -1,0 +1,481 @@
+/*PERSONEL*/
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&family=Dancing+Script:wght@500&display=swap');
+  /*CE LIEN NOUS AIDE POUR AVOIR LA POLICE Avent Pro et Dancing Script  */
+
+
+@font-face /* CECI POUR DEFINIR UNE NOUVELLE POLICE TELECHARGE, DONC N'EXISTAIT PAS DANS HTML
+                CETTE POLICE QU'ON VEUT CREER POURRA ETRE UTILISER COMME D'AUTRES DANS LE FICHIER CSS  */
+{
+	font-family: 'LearningCurve';
+	src: url('learning_curve.eot');
+	src: url('learning_curve.eot?#iefix') format('embedded-opentype'),    /* POUR NOTRE NOUVELLE POLICE, ON A AJOUTE DES FORMATS*/
+		 url('learning_curve.woff') format('woff'),                       /* POUR PERMMETRE A TOUS LES NAVIGUATEURS DE NOUS LES OUVRIR*/
+		 url('learning_curve.ttf') format('truetype'),
+		 url('learning_curve.svg#LearningCurve') format('svg');         /* LES FORMATS POPULAIRES SONT .eot, .woff, .ttf, .svg ...*/
+}
+
+
+html
+{
+    scroll-behavior: smooth; /* une petite lenteur dans le code htlm si l'on veut quitter un point A à B*/
+}
+
+body
+{
+    font-family: 'Advent Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+ul
+{
+    padding: 0;
+    margin: 0;
+}
+li
+{
+    list-style-type: none; /*Nous ne voulons pas de style pour tout ce qui concerne li
+            Ce qui fait disparaitre par exemple les gros point devant les li*/
+    color: black;
+}
+h2
+{
+    text-transform:  uppercase; /* Transforme tous les titres h2 en majuscule*/
+    text-align: center; /*Pour centrer tous les h2*/
+    padding-top: 30px; /*Pour une large visibilité des h2*/
+    font-size: 2em; /* La taille confortable du texte*/
+}
+a
+{
+    text-decoration: none; /*Pour supprimer par exemple les ligne sous les liens */
+    color: black;
+}
+
+/* ########################### M E N U ############################################### */
+.bouton
+{
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    height: 45px;
+    width: 45px;
+    background: #1b1b1b;
+    text-align: center;
+    border-radius: 3px;
+    transition: left 0.5s ease;
+    
+}
+
+.bouton.click
+{
+    right: 260px;
+}
+
+.bouton span
+{
+    color: white;
+    font-size: 28px;
+    padding: 0px 7px 0px 10px;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.bouton.click span::before
+{
+    content:  '\f00d';
+}
+
+.menu
+{
+    position: fixed;
+    height: 1%;
+    width: 265px;
+    background: #95ff93;
+    right: -265px;
+    transition: 0.4s ease;
+}
+
+.menu.show
+{
+    right: -20px;
+}
+
+.menu .lemenu
+{
+    color: antiquewhite;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 65px;
+    text-align: center;
+    background: rgba(105, 105, 105, 0.1);
+}
+
+ nav ul
+{
+    background-color: antiquewhite;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+ nav ul li
+{
+    line-height: 60px;
+    border-bottom: 1px solid rgb(5, 73, 4, 0.1);
+   background: antiquewhite;
+}
+
+ nav ul li a
+{
+    position: relative;
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 35px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+    background: antiquewhite;
+}
+
+ nav ul li a:hover
+{
+    color: #054904;
+    border-left-color: #054904;
+    font-weight: bold;
+}
+
+nav ul ul
+{
+    position: static;
+    display: none;
+}
+
+ nav ul .monc-show.show
+{
+    display: block;
+}
+
+ nav ul .admi-show.show1
+{
+    display: block;
+}
+
+ nav ul ul li
+{
+    line-height: 42px;
+    border-bottom: none;
+}
+
+ nav ul ul li a
+{
+    font-size: 17px;
+    color: blue;
+    padding-left: 70px;
+}
+
+ nav ul li a span
+{
+    position: absolute;
+    top: 50%;
+    left: 9em;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: 0.4s;
+    color: blue;
+
+}
+
+ nav ul li a span.rotation
+{
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+ nav ul li:last-child
+{
+    line-height: 60px;
+    border-bottom: 1px solid rgba(233, 5, 17, 0.4);
+}
+
+
+/* ############################################################################### */
+
+/* ********************PARTIE NAVBAR****************************************************************** */
+/* headerr navr
+{
+    overflow: hidden; Très indispensable et regulier pour nos sites*
+    background-color:#95ff93; #ffe8d3*;
+    position: fixed;
+    width: 100%; *On fixe la largeur de l'entete à 100% quel que soit le navigateur*
+    opacity: 1;
+}
+
+headerr li
+{
+    float: right; *Flotter à droite*
+    font-size: 1.2em; La différence entre em et px est que avec em, 
+            le caractère grandit ensemble avec l'écran alors les px sont figés*
+}
+headerr li a
+{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 18px 16px; /*En haut et en bas ; à gauche et à droite *
+}
+*/
+header #debut
+{
+    overflow: hidden; /*Très indispensable et regulier pour nos sites**/
+    background-color:#95ff93; /*#ffe8d3*/;
+    position: fixed;
+    width: 100%; /*On fixe la largeur de l'entete à 100% quel que soit le navigateur*/
+    opacity: 1;
+    height: 10%;
+
+    /*float: right;*/ /*Flotter à droite*/
+   /* font-size: 3em;*/ /*La différence entre em et px est que avec em, 
+            le caractère grandit ensemble avec l'écran alors les px sont figés*/
+}
+
+#logo
+{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;  /*la taille de l'épaissuer en gras*/
+    float: left; /*Va se positionner tout seul à gauche*/
+    font-size: 1.5em;
+    padding: 15px 0px 0px 0px;
+}
+
+#imagePrincipale
+{
+    padding-top: 60px; /*Mettre de coté l'image principale, la centrer ...*/
+    background: url(media/artnord.JPG) no-repeat fixed 50% 50%; /* Image de fond, pas de repétition et fixé là à ce niveau*/
+    background-size: cover; /*Couvrir toute l'image à l'écran quel que soit l'écran*/
+    height: 700px; /* Aggrandir la taille*/
+}
+
+h1
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: 5em;
+    color: antiquewhite;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 1px 2px 3px black; /*TEXT SHADOW CSS GENERATOR peut facilement aider pour les ombres sur internet*/ 
+}
+
+#trait1
+{
+    height: 1px;
+    width: 50%;
+    background-color: antiquewhite;
+    margin: -3px auto; /*une marge pour éviter qu'il soit collé*/
+    box-shadow: 1px 1px 3px black;
+}
+
+#petittexte
+{
+    font-size:2.5em;
+    text-align: center;
+    color: #95ff93;
+    text-shadow: 1px 1px 3px black;
+    text-transform: uppercase;   
+}
+
+
+/* *************PARTIE PRESENTATION*********************** */
+#presentation
+{
+    background-color: #95ff93;
+    padding: 1% 10% 1% 10% /*10px 0px 100px 0px*/; 
+}
+
+#texte1
+{
+    padding: 0px 20%;
+}
+
+#photos
+{
+    display: flex;                    /*Pour que les images soient alignées*/
+    flex-wrap: wrap;                
+    justify-content: space-between;    /*Repartition des éléments*/
+    padding: 30px 10%; /*Pour mieux disposer mes img*/
+}
+
+.imagePhoto h4
+{
+    font-family: LearningCurve, 'Dancing Script', cursive;
+    font-size: 1.5em;
+    font-weight: 300px;
+    text-align: center;
+    margin:  10px;
+}
+
+.imagePhoto img
+{
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 1px rgb(0,0,0,0.7);
+}
+
+.imagePhoto img:hover /*hover veut juste dire, quand on survole 
+                    un texte ou une image spécifique...FAIRE CECI*/
+ {
+     opacity: 0.5; /*L'opacité passe de 1 à 0.5*/
+     transform: scale(1.05);     /*transforme l'échelle de l'image '1 est standard facon'*/
+     transition: 0.5s ease-in-out;/*On ajoute une transition pour une certaine lenteur sur l'image opaque de 0.5*/
+ }
+/* *************************LIVRES A DECOUVRIR******************** */
+#livres
+{
+    height: 1500px;
+    background-color: yellowgreen;
+    padding: 1px 20px;
+}
+
+#livres h2
+{
+    padding: 60px;
+}
+
+#acros
+{
+    background: url(media/tn_acros1.PNG);   
+}
+
+#psycho2
+{
+    background: url(media/tn_psycho2.PNG);
+}
+
+#psycho1
+{
+    background: url(media/tn_psycho1.PNG);
+}
+
+#bgb
+{
+    background: url(media/tn_bgb.jpg);
+}
+
+#livres li
+{
+    margin: 65px 100px 0 100px; /*large gauche et à droite*/ 
+    height: 226px; /*Une Hauteur de 226px*/
+    width: 55%; /*Largeur*/
+    float: left; /*Déplacer et mettre à gauche*/
+    max-width: 550px;
+    box-shadow: 6px 6px 28px -1px rgb(0,0,0,0.75); 
+}
+
+#livres p
+{
+    height: 45px;
+    width: 235px;
+    background-color: red;
+    float: right;
+    margin: 50px -170px 0 0;
+    color: antiquewhite;
+    font-size: 1.2em;
+    /* font-style: italic; */
+    text-align: center;
+    padding: 20px 0 0px 0;
+    /* text-transform: uppercase; */
+    box-shadow: 4px 4px 0 1px rgb(270,20,20,1);
+}
+
+#livres #psycho2, #livres #bgb
+{
+    float: right;
+}
+
+#psycho2 p, #bgb p
+{
+    float: left;
+    background-color: black;
+    box-shadow: 4px 4px 0 1px rgb(0,0,0,1);
+    margin-left: -170px;
+}
+/* *************LES ADRESSES DANS FOOTER**********************/
+footer
+{
+    background-color: #190018;
+    color: antiquewhite;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+form
+{
+    margin:  0 auto; /* auto signifie centrer seulement*/
+    max-width: 900px; /* La largeur maximale, le cadran ne va pas 
+                s'enggrandir quel que soit le texte qu'on y met*/
+}
+
+input, textarea, button
+{
+    border: none;
+    width: 55%;
+    padding: 15px 10px;
+    margin: 1px 0;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1.2em;
+    border-radius: 8px;
+}
+
+textarea
+{
+    height: 120px;
+}
+
+button
+{
+    font-size: 1.5em;
+    background-color: bisque;
+}
+
+button:hover
+{
+    background-color: #95ff93;
+    color: black;
+    cursor: pointer; /*Curseur devient une main lorsqu'il survole sur button*/
+    transition: 0.3s ease-in-out;
+}
+
+#trait2
+{
+    background-color: antiquewhite;
+    height: 1px;
+    width: 75%;    
+    margin: 60px auto; /*une marge pour éviter qu'il soit collé*/
+    box-shadow: 1px 1px 3px black;
+}
+
+#copyrightETicones
+{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+
+#icones
+{
+    width: 95%;
+    text-align: right;
+}
+
+#icones a, span
+{
+    display: inline-block; /*Que les icones se mettent sur la meme ligne*/
+    padding: 0 15px; /*padding ou margin*/
+    color: antiquewhite;
+    font-size: 1.1em;
+}
+
+#icones a:hover
+{
+    transform: scale(1.5);
+    transition: 0.1s;
+}

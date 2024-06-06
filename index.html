@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>BGB'sArt && Communication</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="Font_awesome/css/all.min.css">
+	<script src="jquery-3.6.0.js"></script>
+</head>
+<body>
+	<header>
+		<div id="debut"><li id="logo"><a href="#">BGB'sArt && Communication</a></li></div>
+			<div class="bouton">
+					<span class="fas fa-bars"></span>
+			</div>
+
+				<nav class="menu">
+						<div class="lemenu">Menu</div>
+					<ul>														<!-- le ''#'' représente ici un lien--> 
+					   <li><a href="#">Acceuil</a></li>
+					   <li>
+						   <a href="#" class="monc-btn">Mon compte
+						   <span class="fas fa-caret-down first"></span>
+					   </a>
+						   <ul class="monc-show">
+								   <li><a href="#">Arrivé</a></li>
+								   <li><a href="#">Départ</a></li>
+								   <li><a href="#">Régularité hebdo (pdf)</a></li>
+								   <li><a href="#">Informations</a></li>
+						   </ul>
+					   </li>
+					   <li>
+						   <a href="#" class="admi-btn">Administration
+						   <span class="fas fa-caret-down second"></span>
+					   </a>
+						   <ul class="admi-show">
+								   <li><a href="#">Connexion</a></li>
+						   </ul>
+					   </li>
+					   <li><a href="#">A propos</a></li>
+					   <li><a href="#">Quitter</a></li>
+					</ul>
+			   </nav>
+		<!-- ######################################################################## -->	
+	</header>
+		<section id="imagePrincipale">
+				<div>
+					<h1>BGB'sArt && Communication</h1>
+					<div id="trait1"></div>
+					<h3 id="petittexte">L'art est pouvoir</h3>
+				</div>
+		</section>
+	<section id="presentation">
+		<div id="texte1"></div>
+		<h2>Une seule vérité, pour tout savoir</h2>
+		<p>Par-dessus tout, l’art est un pouvoir.
+		 Il est le fruit de curiosité humaine 
+		et la beauté de tout ce qui existe. 
+	L'artiste dévoile sa force
+	à travers ses émotions les plus réelles ou imaginaires.
+	Les émotions sont le propre des Hommes,
+	c'est dailleurs pourquoi l'artiste n'a pas d'âge.
+	Par-dessus tout, l’art est un pouvoir.
+	 Il est le fruit de curiosité humaine 
+	et la beauté de tout ce qui existe. 
+L'artiste dévoile sa force
+à travers ses émotions les plus réelles ou imaginaires.
+Les émotions sont le propre des Hommes,
+c'est dailleurs pourquoi l'artiste n'a pas d'âge.</p>
+	<div id="photos">
+	<div class="imagePhoto">	
+	<h4>1ère citation</h4>
+	<a href="#"><img src="media/tn_1572159250814.JPG" alt="citation1"></a></div>
+	<div class="imagePhoto">	
+	<h4>2e citation</h4>
+	<a href="#"><img src="media/tn_1574881526841.JPG" alt="citation2"></a></div>
+	<div class="imagePhoto">	
+	<h4>3e citation</h4>
+	<a href="#"><img src="media/tn_1578249429024.JPG" alt="citation3"></a></div>
+	<div class="imagePhoto">	
+	<h4>4e citation</h4>
+	<a href="#"><img src="media/tn_1579374836036.JPG" alt="citation4"></a></div>
+	</div>
+	</section>
+
+	<section id="livres">
+		<h2>Nous vous présentons quelques livres</h2>
+			<ul>
+				<li id="acros"><p>Un acrostiche, une Poésie</p></li>
+				<li id="psycho2"><p>Psychologie d'un trader</p></li>
+				<li id="psycho1"><p>Paragraphe psychologique</p></li>
+				<li id="bgb"><p>BGB en uniforme du jour</p></li>
+			</ul>		
+	</section>
+	
+
+	<footer class="adresse">
+		<h2 id="contacter">Contactez nous</h2>
+		<form>
+			<input placeholder="Votre nom et prénoms">
+			<input placeholder="Votre e-mail">
+			<textarea placeholder="Renseignez-nous de votre message..."></textarea>
+			<button>Envoyer</button>
+		</form>
+
+		<div id="trait2"></div>
+		<div id="copyrightETicones">
+			<div id="copyright"></div>
+				<span>© fromScratch(); 2021</span>	
+					<div id="icones">
+						<a href="http://www.facebook.fr"><i class="fab fa-facebook"></i></a>
+						<a href="http://www.instagram.fr"><span class="fab fa-instagram"></span></a>
+						<span class="fa fa-user"></span>
+					</div>	
+		</div>
+	</footer>
+	
+	<!-- ###############################LE SCRIPT################################################################ -->
+	<script>
+			$('.bouton').click(function(){
+				$(this).toggleClass("click");
+				$('.menu').toggleClass("show");
+			});
+ 
+				$('.monc-btn').click(function()
+				{
+					$('nav ul .monc-show').toggleClass("show");
+					$('nav ul .first').toggleClass("rotation");
+				});
+				$('.admi-btn').click(function()
+				{
+					$('nav ul .admi-show').toggleClass("show1");
+					$('nav ul .second').toggleClass("rotation");
+				});
+ 
+		</script>   
+ <!-- ####################################################################################################### -->
+ 
+	<!-- AVEC planet hoster gratuit SUR GOOGLE, JE PEUX HEBERGER MON SITE WEB -->
+
+</body>
+</html>
